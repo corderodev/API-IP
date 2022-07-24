@@ -4,10 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Search Info IP</title>
+    <meta name="description" content="API to see information for some IP.">
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
 </head>
 <body>
+    <header>
+        <nav class="container">
+            <ul>
+                <li><strong>dnlambb</strong></li>
+            </ul>
+            <ul>
+                <li><a href="https://github.com/dnlambb/API-IP">Github</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <form id="form">
+            <label>
+                IP Address
+                <input required pattern="[0-9]{2}.[0-9]{2}.[0-9]{3}.[0-9]{3}" id="input" type="text" placeholder="Insert the IP">
+                <small>For example: 54.85.132.205</small>
+            </label>
+            <button type="submit" id="submit" class="primary">
+                Search for information about this IP
+            </button>
+        </form>
+        <div>
+            <pre id="results"></pre>
+        </div>
+    </main>
     <script src="./fetchApi.js"></script>
 </body>
 </html>
